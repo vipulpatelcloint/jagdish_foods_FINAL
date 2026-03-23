@@ -1,35 +1,23 @@
 name: jagdish_foods
-description: Jagdish Foods - Authentic Gujarati Snacks D2C App
+description: Jagdish Foods - Authentic Gujarati Snacks
 version: 1.0.0+1
-publish_to: 'none'
+publish_to: none
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-
-  # State Management
   provider: ^6.1.2
-
-  # Navigation
-  go_router: ^14.6.3
-
-  # Local Storage
-  shared_preferences: ^2.3.4
-
-  # Animations & UI
-  flutter_animate: ^4.5.0
-  smooth_page_indicator: ^1.1.0
-  flutter_rating_bar: ^4.0.1
-
+  go_router: ^13.2.0
+  shared_preferences: ^2.2.2
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true

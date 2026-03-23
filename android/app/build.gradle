@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace "com.jagdishfoods.app"
+    namespace "com.jagdish.app"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -23,19 +23,16 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.jagdishfoods.app"
+        applicationId "com.jagdish.app"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutter.versionCode
         versionName flutter.versionName
-        multiDexEnabled true
     }
 
     buildTypes {
         release {
             signingConfig signingConfigs.debug
-            minifyEnabled false
-            shrinkResources false
         }
     }
 }
