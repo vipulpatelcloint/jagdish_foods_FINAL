@@ -8,6 +8,12 @@ import '../../../data/models/models.dart';
 class OffersScreen extends StatelessWidget {
   const OffersScreen({super.key});
 
+  static const _howToSteps = [
+    {'icon': '1️⃣', 'text': 'Add products to your cart'},
+    {'icon': '2️⃣', 'text': 'Go to Cart → Enter coupon code'},
+    {'icon': '3️⃣', 'text': 'Tap Apply and enjoy savings!'},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,16 +145,12 @@ class OffersScreen extends StatelessWidget {
               const Text('How to use coupons?',
                   style: TextStyle(fontFamily: 'Poppins', fontSize: 14, fontWeight: FontWeight.w700, color: AppColors.textDark)),
               const SizedBox(height: 12),
-              ...[
-                ('1️⃣', 'Add products to your cart'),
-                ('2️⃣', 'Go to Cart → Enter coupon code'),
-                ('3️⃣', 'Tap Apply and enjoy savings!'),
-              ].map((step) => Padding(
+              ..._howToSteps.map((step) => Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Row(children: [
-                  Text(step.$1, style: const TextStyle(fontSize: 16)),
+                  Text(step['icon']!, style: const TextStyle(fontSize: 16)),
                   const SizedBox(width: 10),
-                  Text(step.$2, style: const TextStyle(fontFamily: 'Poppins', fontSize: 13, color: AppColors.textMedium)),
+                  Expanded(child: Text(step['text']!, style: const TextStyle(fontFamily: 'Poppins', fontSize: 13, color: AppColors.textMedium))),
                 ]),
               )),
             ]),
